@@ -15,11 +15,11 @@
 ・Ultra96v2用ACアダプタ  
 ・LAN to USB Type A 変換ケーブル (あれば)  
 ###  セットアップ手順
-・balena etcherでFPGA用osをSDカードにフォーマット
-・micro USB, LAN, ACアダプタをFPGAに接続
-・FPGAのsw4を押す
-・Tera Term 等でシリアル通信開始
-・ifconfigで確認したip addressにアクセス
+・balena etcherでFPGA用osをSDカードにフォーマット  
+・micro USB, LAN, ACアダプタをFPGAに接続  
+・FPGAのsw4を押す  
+・Tera Term 等でシリアル通信開始  
+・ifconfigで確認したip addressにアクセス  
 
 ## 大まかな流れ
 Step1: vitis_hlsにてcppでコード記述、ip化  
