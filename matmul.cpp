@@ -81,8 +81,8 @@ void matmul(data_t A_outer[SIZE*SIZE], data_t B_outer[SIZE*SIZE], data_t bias_ou
 	std::memcpy(B, B_outer, SIZE*SIZE*sizeof(data_t));
 	std::memcpy(bias, bias_outer, SIZE*sizeof(data_t));
 
-    const int UNROLL_OCH=8;
-    const int UNROLL_X=8;
+	const int UNROLL_OCH=8;
+	const int UNROLL_X=8;
 
 	for(int block_i = 0; block_i < SIZE; block_i+=UNROLL_OCH){
 		for(int block_j = 0; block_j < SIZE; block_j+=UNROLL_X){
@@ -116,7 +116,7 @@ void matmul(data_t A_outer[SIZE*SIZE], data_t B_outer[SIZE*SIZE], data_t bias_ou
 			}
 		}
 	}
-  std::memcpy(output_outer, output, SIZE*SIZE*sizeof(data_t));
+  	std::memcpy(output_outer, output, SIZE*SIZE*sizeof(data_t));
 }
 
 
@@ -197,7 +197,7 @@ void matmul(data_t A_outer[SIZE][SIZE], data_t B_outer[SIZE][SIZE], data_t bias_
 			}
 		}
 	}
-  2d_memcpy(output, SIZE, SIZE, output_outer);
+  	2d_memcpy(output, SIZE, SIZE, output_outer);
 }
 
 //testbench
