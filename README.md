@@ -10,7 +10,7 @@
 ・Tera Tarm
 ### ハードウェア
 ・Ultra96v2 FPGAボード  
-・SDカード16G以上  
+・micro SDカード16G以上  
 ・micro USBケーブル  
 ・Ultra96v2用ACアダプタ  
 ・LAN to USB Type A 変換ケーブル (あれば)  
