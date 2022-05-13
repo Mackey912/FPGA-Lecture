@@ -21,7 +21,7 @@
 ・Tera Term 等でシリアル通信開始
 ・ifconfigで確認したip addressにアクセス
 
-# 大まかな流れ
+## 大まかな流れ
 Step1: vitis_hlsにてcppでコード記述、ip化  
 Step2: vivadoにてStep1で作成したipとプロセッサとの接続, bitstream化  
 Step3: Step2にて作成した.bit, .hwhファイルをFPGAに転送, pynq os上のpythonでip操作  
