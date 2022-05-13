@@ -2,13 +2,13 @@
 
 ## FPGAセットアップ
 
-### ソフトウェア
+### ソフトウェア一覧
 ・Vitis_hls  
 ・Vivado  
 ・http://www.pynq.io/board.html にてUltra96v2のv2.7のOS  
 ・balena etcher  
 ・Tera Tarm
-### ハードウェア
+### ハードウェア一覧
 ・Ultra96v2 FPGAボード  
 ・micro SDカード16G以上  
 ・micro USBケーブル  
