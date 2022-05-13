@@ -9,7 +9,7 @@
 ・balena etcher  
 ・Tera Tarm
 ### ハードウェア
-・Ultra96v2 FPGAボード
+・Ultra96v2 FPGAボード  
 ・SDカード16G以上  
 ・micro USBケーブル  
 ・Ultra96v2用ACアダプタ  
