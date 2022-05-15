@@ -27,7 +27,7 @@ Step2: vivadoにてStep1で作成したipとプロセッサとの接続, bitstre
 Step3: Step2にて作成した.bit, .hwhファイルをFPGAに転送, pynq os上のpythonでip操作  
 
 ### Step3
-・vivadoにてgenerate bitstreamで作成した、デザイン名+wrapper.bitとデザイン名.hwhファイルをFPGAに転送
+・vivadoにてgenerate bitstreamで作成した、デザイン名+wrapper.bitとデザイン名.hwhファイルをFPGAに転送  
 ・.bitファイルの拡張子前の名前は、.hwhと揃えておく  
 ・pynqライブラリを使用し、overlayとして読み込む  
 ・配列データやctrl信号をipに送り込み、実行する  
