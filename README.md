@@ -25,3 +25,7 @@
 Step1: vitis_hlsにてcppでコード記述、ip化  
 Step2: vivadoにてStep1で作成したipとプロセッサとの接続, bitstream化  
 Step3: Step2にて作成した.bit, .hwhファイルをFPGAに転送, pynq os上のpythonでip操作  
+
+### Step3
+・vivadoにてgenerate bitstreamで作成した、デザイン名+wrapper.bitとデザイン名.hwhファイルをFPGAに転送
+・
