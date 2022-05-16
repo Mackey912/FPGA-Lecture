@@ -35,6 +35,7 @@ Step3: Step2にて作成した.bit, .hwhファイルをFPGAに転送, pynq os上
 
 ## レクチャー内容
 ### Lチカ
+・https://valinux.hatenablog.com/entry/20211125 を参照  
 ### 行列積(matmul)の高速化
 ### CNNの高速化
 
