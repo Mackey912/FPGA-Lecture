@@ -33,7 +33,7 @@ Step3: Step2にて作成した.bit, .hwhファイルをFPGAに転送, pynq os上
 ・pynqライブラリを使用し、overlayとして読み込む  
 ・配列データやctrl信号をipに送り込み、実行する  
 
-## LESSON
+## レクチャー内容
 ### Lチカ
 ### 行列積(matmul)の高速化
 ### CNNの高速化
