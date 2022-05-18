@@ -41,17 +41,26 @@ Step3: Step2にて作成した.bit, .hwhファイルをFPGAに転送, pynq os上
 ・Validate Design  
 ・Create HDL Wrapper  
 ・Generate Bitstream  
-### Step3
+### Step3  (FPGAボード上のpynq osでの作業)
 ・Step2にてgenerate bitstreamで作成した、"デザイン名+wrapper.bit"と"デザイン名.hwh"ファイルをFPGAに転送  
 ・.bitファイルの拡張子前の名前は、.hwhと揃えておく  
 ・pynqライブラリを使用し、overlayとして読み込む  
 ・配列データやctrl信号をipに送り込み、実行する  
-
 ## レクチャー内容
 ### Lチカ
 ・https://valinux.hatenablog.com/entry/20211125 参照  
 ### 行列積(matmul)の高速化
-・本リポジトリコード参照  
+#### とりあえず動かす
+・cppによる行列積関数の作成 (Vitis HLS)  
+・配線用のセッティングhls interfaceの挿入  
+・Step1まで実行  
+・Step2を実行  
+・Step3を実行、ip_check_on_pynq.pyを参照  
+#### 最適化をしてみる１
+・先ほど作った行列積関数にpragma(unroll, pipeline, array_partition等)を追加して、ベースラインからの高速化の度合いを確認  
+・pragmaの詳細はhttps://japan.xilinx.com/htmldocs/xilinx2019_1/sdaccel_doc/hls-pragmas-okr1504034364623.html 参照  
+・配列は2ポートのBRAMに固定  
+#### 最適化をしてみる２
 ### CNNの高速化
 ・https://www.acri.c.titech.ac.jp/wordpress/archives/5181 参照  
 ・https://qiita.com/HirokiNakahara/items/4e6bad539fe9cce340c4 参照 
