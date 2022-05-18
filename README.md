@@ -26,9 +26,23 @@
 Step1: vitis_hlsにてcppでコード記述、ip化  
 Step2: vivadoにてStep1で作成したipとプロセッサとの接続, bitstream化  
 Step3: Step2にて作成した.bit, .hwhファイルをFPGAに転送, pynq os上のpythonでip操作  
-
+### Step1 (Vitis HLSにて作業)
+・cppにて高速化したい関数、その関数の正しさを証明するためのテストベンチを作成  
+・C Simulation  
+・C Synthesis  
+・C/RTL Simulation (可能であれば)  
+・Export RTL  
+### Step2 (Vivadoにて作業)
+・Step1にて作成したIPをV読み込む  
+・Create Block Design  
+・プロセッサ(zynq Ultrascale+)と以前に読み込んだIPをロード  
+・プロセッサ側のmasterとslaveピンの数を調整  
+・プロセッサと自作IPの配線接続  
+・Validate Design  
+・Create HDL Wrapper  
+・Generate Bitstream  
 ### Step3
-・vivadoにてgenerate bitstreamで作成した、デザイン名+wrapper.bitとデザイン名.hwhファイルをFPGAに転送  
+・Step2にてgenerate bitstreamで作成した、"デザイン名+wrapper.bit"と"デザイン名.hwh"ファイルをFPGAに転送  
 ・.bitファイルの拡張子前の名前は、.hwhと揃えておく  
 ・pynqライブラリを使用し、overlayとして読み込む  
 ・配列データやctrl信号をipに送り込み、実行する  
