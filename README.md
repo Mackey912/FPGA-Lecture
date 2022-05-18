@@ -6,8 +6,8 @@
 ・Vitis_hls  
 ・Vivado  
 ・http://www.pynq.io/board.html にてUltra96v2のv2.7のOS  
-・balena etcher  
-・Tera Tarm
+・balena etcher https://www.balena.io/etcher/  
+・Tera Tarm https://ttssh2.osdn.jp/  
 ### ハードウェア一覧
 ・Ultra96v2 FPGAボード  
 ・Windows PC or Ubuntu PC  
