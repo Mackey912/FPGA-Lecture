@@ -60,8 +60,16 @@ Step3: Step2にて作成した.bit, .hwhファイルをFPGAに転送, pynq os上
 ・先ほど作った行列積関数にpragma(unroll, pipeline, array_partition等)を追加して、ベースラインからの高速化の度合いを確認  
 ・pragmaの詳細はhttps://japan.xilinx.com/htmldocs/xilinx2019_1/sdaccel_doc/hls-pragmas-okr1504034364623.html 参照  
 ・配列は2ポートのBRAMに固定  
-#### 最適化をしてみる２
-### CNNの高速化
+#### 最適化をしてみる２ 
+・先ほどのセクションでの問題点を考えてみる、リソースとレイテンシの関係など  
+・行列積の処理フロー変更による高速化を試す  
+### CNNの実装
+#### CNNのハードウェア実装流れ
+・pythonにてcnnモデル構築、学習  
+・学習後の重み、モデルからの入力、出力データの抽出 (cppで使えるように)  
+・cppにてcnn関数、テストベンチの実装    
+・Step2, Step3の実装  
+#### 例
 ・https://www.acri.c.titech.ac.jp/wordpress/archives/5181 参照  
 ・https://qiita.com/HirokiNakahara/items/4e6bad539fe9cce340c4 参照 
 
