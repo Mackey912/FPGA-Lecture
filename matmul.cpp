@@ -1,3 +1,14 @@
+#define SIZE 2
+typedef half data_t;
+
+void memcpy_2d(data_t input[SIZE][SIZE], int height, int width, data_t output[SIZE][SIZE]){
+  for(int i=0; i<height; i++){
+    for(int j=0; j<width; j++){
+      output[i][j] = input[i][j];
+    }
+  }
+}
+
 //2d normal version
 void matmul(data_t A_outer[SIZE][SIZE], data_t B_outer[SIZE][SIZE], data_t output_outer[SIZE][SIZE]){
 
@@ -13,8 +24,11 @@ void matmul(data_t A_outer[SIZE][SIZE], data_t B_outer[SIZE][SIZE], data_t outpu
 //#pragma hls pipeline off
 
 	data_t A[SIZE][SIZE];
+#pragma HLS bind_storage variable=A type=RAM_2P impl=BRAM
 	data_t B[SIZE][SIZE];
+#pragma HLS bind_storage variable=B type=RAM_2P impl=BRAM
 	data_t output[SIZE][SIZE];
+#pragma HLS bind_storage variable=output type=RAM_2P impl=BRAM
 
 	memcpy_2d(A_outer, SIZE, SIZE, A);
 	memcpy_2d(B_outer, SIZE, SIZE, B);
@@ -29,7 +43,6 @@ void matmul(data_t A_outer[SIZE][SIZE], data_t B_outer[SIZE][SIZE], data_t outpu
 		  sum=0;
 	  }
 	}
-
 	memcpy_2d(output, SIZE, SIZE, output_outer);
 }
 
